@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Footer } from './components/Footer';
+import { Header } from './components/Header';
+
+import styles from './styles/landing.module.scss';
+import './styles/global.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.container}>
+      <Header />
+
+      <main>
+        <h1>
+          <span>Develop.</span>
+          <span>Preview.</span>
+          <span>Ship.</span>
+        </h1>
+
+        <div className={styles.buttons}>
+          <button type="button">Start Deploying</button>
+          <button type="button">Get a Demo</button>
+        </div>
+
+        <h2>
+          Vercel combines the best developer experience with an obsessive focus on end-user performance.
+          Our platform enables frontend teams to do their best work.
+        </h2>
+      </main>
+
+      <Footer />
     </div>
   );
 }

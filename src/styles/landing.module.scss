@@ -1,0 +1,106 @@
+@keyframes colorCycle {
+  0%, 55% {
+    filter: brightness(0) invert(1); // white
+  }
+
+  11%, 33% {
+    filter: none;
+  }
+}
+
+.container {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  main {
+    max-width: 65.5rem;
+    padding: 1rem 1.5rem;
+
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      font-size: 8rem;
+      line-height: 100%;
+      letter-spacing: -0.775rem;
+
+      color: var(--white);
+
+      span {
+        padding: 0.419rem;
+        filter: brightness(0) invert(1);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        animation: colorCycle 10s ease-in-out infinite;
+      }
+
+      span:nth-child(1) {
+        background-image: linear-gradient(90deg, #007cf0, #00dfd8);
+      }
+
+      span:nth-child(2) {
+        background-image: linear-gradient(90deg, #7928ca, #ff0080);
+        animation-delay: 3.33s;
+      }
+
+      span:nth-child(3) {
+        background-image: linear-gradient(90deg, #ff4d4d, #f9cb28);
+        animation-delay: 6.66s;
+      }
+    }
+
+    .buttons {
+      margin-top: 4rem;
+
+      display: flex;
+      align-items: center;
+
+      > button {
+        background: var(--white);
+        color: var(--black);
+        
+        margin: 0.75rem;
+        padding: 1rem 2.813rem;
+        font-weight: 500;
+
+        border: 1px solid var(--white);
+        border-radius: 0.25rem;
+
+        transition: .2s ease-in;
+
+        &:last-child {
+          background: transparent;
+          color: var(--gray);
+          border-color: var(--gray);
+        }
+
+        &:hover {
+          background: transparent;
+          color: var(--white);
+          border-color: var(--white);
+        }
+      }
+    }
+
+    h2 {
+      margin: 4rem 0;
+      font-size: 1.25rem;
+      font-weight: 400;
+      letter-spacing: -0.025rem;
+      text-align: center;
+    }
+  }
+}
