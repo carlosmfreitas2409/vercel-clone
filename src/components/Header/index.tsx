@@ -1,32 +1,55 @@
-import styles from './styles.module.scss';
+import { useLayoutEffect, useState } from 'react';
+import { Button } from '../Button';
 
 import logoSvg from '../../assets/logo.svg';
-import specialButtonSvg from '../../assets/special-button.svg';
-import avatarSvg from '../../assets/avatar.svg';
+
+import { Container, Content, Logo, Navigation, Details } from './styles';
 
 export function Header() {
+  const [isRetracted, setIsRetracted] = useState(true);
+
+  useLayoutEffect(() => {
+    function onScroll() {
+      if(window.scrollY > 15) {
+        setIsRetracted(false);
+      } else {
+        setIsRetracted(true);
+      }      
+    }
+
+    window.addEventListener('scroll', onScroll);
+
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+  
   return (
-    <header className={styles.header}>
-      <h1>
-        <img src={logoSvg} alt="Logo" />
-      </h1>
+    <Container isRetracted={isRetracted}>
+      <Content>
+        <Logo>
+          <img src={logoSvg} alt="Logo" />
+        </Logo>
 
-      <nav>
-        <ul>
-          <li><a href="/">Solutions</a></li>
-          <li><a href="/">Resources</a></li>
-          <li><a href="/">Pricing</a></li>
-        </ul>
-      </nav>
+        {isRetracted && (
+          <Navigation>
+            <ul>
+              <li><a href="/">Templates</a></li>
+              <li><a href="/">Analytics</a></li>
+              <li><a href="/">Pricing</a></li>
+            </ul>
+          </Navigation>
+        )}
 
-      <div>
-        <a href="/">
-          <img src={specialButtonSvg} alt="Special Conference" />
-          <span>Special Conf</span>
-        </a>
+        <Details>
+          <div>
+            <a href="/">Contact</a>
+            <a href="/">Login</a>
 
-        <img src={avatarSvg} alt="Avatar" />
-      </div>
-    </header>
+            <span>
+              <Button size="sm">Sign Up</Button>
+            </span>
+          </div>
+        </Details>
+      </Content>
+    </Container>
   )
 }
