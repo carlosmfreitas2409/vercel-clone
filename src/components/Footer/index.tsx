@@ -2,7 +2,7 @@ import { RiGithubFill, RiTwitterFill } from 'react-icons/ri';
 
 import { Container, StatusBox } from './styles';
 
-function Footer() {
+export function Footer() {
   return (
     <Container>
       <span>Copyright © {new Date().getFullYear()} Vercel Inc. All rights reserved.</span>
@@ -20,5 +20,3 @@ function Footer() {
     </Container>
   );
 };
-
-export default Footer;

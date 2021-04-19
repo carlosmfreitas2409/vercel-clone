@@ -2,6 +2,7 @@ import { Header } from '../../components/Header';
 import { HeroTitle } from '../../components/HeroTitle';
 import { Button } from '../../components/Button';
 import { SectionHeader } from '../../components/SectionHeader';
+import { Footer } from '../../components/Footer';
 
 import nextJsSVG from '../../assets/frameworks/next.svg';
 import reactJsSVG from '../../assets/frameworks/react.svg';
@@ -13,13 +14,23 @@ import angularSVG from '../../assets/frameworks/angular.svg';
 import hugoSVG from '../../assets/frameworks/hugo.svg';
 import gatsbySVG from '../../assets/frameworks/gatsby.svg';
 
+import hashicorpSVG from '../../assets/front/hashicorp.svg';
+import mcdonaldsSVG from '../../assets/front/mcdonalds.svg';
+import airbnbSVG from '../../assets/front/airbnb.svg';
+import washingtonpostSVG from '../../assets/front/washingtonpost.svg';
+import auth0SVG from '../../assets/front/auth0.svg';
+import twilioSVG from '../../assets/front/twilio.svg';
+import uberSVG from '../../assets/front/uber.svg';
+import tripadvisorSVG from '../../assets/front/tripadvisor.svg';
+
 import { 
   Container,
   Content,
   ButtonsContainer,
-  SectionDescription
+  SectionDescription,
+  ShipSection,
+  TestimonialsSection
 } from './styles';
-import Footer from '../../components/Footer';
 
 export function Home() {
   return (
@@ -98,6 +109,43 @@ export function Home() {
             </p>
           </SectionDescription>
         </section>
+
+        <ShipSection>
+          <div>
+            <h2>70</h2>
+            <span>Cities</span>
+          </div>
+
+          <div>
+            <h2>10B+</h2>
+            <span>Requests per week</span>
+          </div>
+
+          <div>
+            <h2>9PB</h2>
+            <span>Data served</span>
+          </div>
+
+          <div>
+            <h2>99.99%</h2>
+            <span>Guaranteed Uptime</span>
+          </div>
+        </ShipSection>
+
+        <TestimonialsSection>
+          <small>TRUSTED BY THE BEST FRONTEND TEAMS</small>
+
+          <div className="testimonials">
+            <img src={hashicorpSVG} alt="HashiCorp" />
+            <img src={mcdonaldsSVG} alt="McDonalds" />
+            <img src={airbnbSVG} alt="Airbnb" />
+            <img src={washingtonpostSVG} alt="The Washington Post" />
+            <img src={auth0SVG} alt="Auth0" />
+            <img src={twilioSVG} alt="Twilio" />
+            <img src={uberSVG} alt="Uber" />
+            <img src={tripadvisorSVG} alt="Tripadvisor" />
+          </div>
+        </TestimonialsSection>
       </Content>
 
       <Footer />
