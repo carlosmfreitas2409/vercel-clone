@@ -19,6 +19,7 @@ import {
   ButtonsContainer,
   SectionDescription
 } from './styles';
+import Footer from '../../components/Footer';
 
 export function Home() {
   return (
@@ -99,6 +100,7 @@ export function Home() {
         </section>
       </Content>
 
+      <Footer />
     </Container>
   );
 }
