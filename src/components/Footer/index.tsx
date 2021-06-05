@@ -17,6 +17,10 @@ export function Footer() {
         <span />
         <p>All systems normal.</p>
       </StatusBox>
+
+      <span>
+        Develop with 💜 by <a href="https://github.com/carlosmfreitas2409">Carlos Eduardo</a>
+      </span>
     </Container>
   );
 };

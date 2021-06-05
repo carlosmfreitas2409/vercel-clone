@@ -117,7 +117,6 @@ export const SectionDescription = styled.div`
 `;
 
 export const ShipSection = styled.div`
-  display: flex;
   margin: 4.2rem 0;
   padding: 1.6rem 0;
 
@@ -125,30 +124,44 @@ export const ShipSection = styled.div`
   border-top: 1px solid var(--gray-700);
   border-bottom: 1px solid var(--gray-700);
 
-  div {
-    border-right: 1px solid var(--gray-700);
-    padding: 0 2.2rem;
-    flex-grow: 1;
-    text-align: center;
+  section {
+    max-width: 1048px;
+    margin: 0 auto;
+    display: flex;
 
-    &:last-child {
-      border-right: none;
+    div {
+      border-right: 1px solid var(--gray-700);
+      padding: 0 2.2rem;
+      flex-grow: 1;
+      text-align: center;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      h2 {
+        color: var(--white);
+        font-size: calc(58px + 2 * ((100vw - 500px) / 1120));
+        font-weight: bold;
+
+        line-height: 1.14em;
+        letter-spacing: -0.05em;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
     }
 
-    h2 {
-      color: var(--white);
-      font-size: calc(58px + 2 * ((100vw - 500px) / 1120));
-      font-weight: bold;
+    @media(max-width: 960px) {
+      flex-direction: column;
 
-      line-height: 1.14em;
-      letter-spacing: -0.05em;
-    }
-
-    span {
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      div {
+        margin: 20px 0;
+      }
     }
   }
 `;

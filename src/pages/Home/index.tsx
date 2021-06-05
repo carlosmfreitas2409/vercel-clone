@@ -111,25 +111,27 @@ export function Home() {
         </section>
 
         <ShipSection>
-          <div>
-            <h2>70</h2>
-            <span>Cities</span>
-          </div>
+          <section>
+            <div>
+              <h2>70</h2>
+              <span>Cities</span>
+            </div>
 
-          <div>
-            <h2>10B+</h2>
-            <span>Requests per week</span>
-          </div>
+            <div>
+              <h2>10B+</h2>
+              <span>Requests per week</span>
+            </div>
 
-          <div>
-            <h2>9PB</h2>
-            <span>Data served</span>
-          </div>
+            <div>
+              <h2>9PB</h2>
+              <span>Data served</span>
+            </div>
 
-          <div>
-            <h2>99.99%</h2>
-            <span>Guaranteed Uptime</span>
-          </div>
+            <div>
+              <h2>99.99%</h2>
+              <span>Guaranteed Uptime</span>
+            </div>
+          </section>
         </ShipSection>
 
         <TestimonialsSection>

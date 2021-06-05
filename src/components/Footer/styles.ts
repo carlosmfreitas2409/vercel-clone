@@ -10,6 +10,15 @@ export const Container = styled.footer`
   align-items: center;
   justify-content: space-between;
 
+  a {
+    color: var(--blue);
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--white);
+    }
+  }
+
   .contact {
     display: flex;
 
